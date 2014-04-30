@@ -1,3 +1,96 @@
 // Normally mainpage styles
+body
+	background: url(../img/bg.jpg) no-repeat 50% 0
+%in
+	width: 1120px 
+	margin: 0 auto
+.in
+	@extend %in
 
- 
+%postmore
+	background: $blue
+	color: #fff
+	text-decoration: none
+	padding: 12px 15px
+	display: inline-block
+
+%postmore1
+	@extend %postmore
+	background: #fff 
+	color: $blue 
+
+
+.done
+	background: #043462
+	text-align: center
+	color: #fff 
+	.in
+		+clr
+		padding: 30px 0 
+	h3
+		font-size: 21px 
+		color: #fff 
+		font-weight: normal
+		margin-bottom: 30px 
+	p
+		font-size: 40px 
+		font-weight: bold
+		font-style: italic
+		margin-bottom: 24px 
+	&__more
+		@extend %postmore1
+		float: right
+
+
+.post
+	padding: 30px 0
+	color: $blue
+	h3
+		font-weight: normal
+		margin-bottom: 30px 
+		font-size: 32px 
+		a
+			color: $blue 
+	p
+		font-size: 16px 
+		margin-bottom: 1em 
+		overflow: hidden
+	&__pic
+		float: right
+		margin-left: 20px 
+	&__more
+		@extend %postmore
+
+
+.bio 
+	.in
+		background: #fff 
+		background: rgba(#fff, .7) 
+		border-top: 1px solid #084B8D 
+		padding: 0 20px 20px 20px
+	&__video
+		float: right
+		text-align: right
+		width: 600px 
+		margin-left: 20px 
+		margin-top: 10px 
+		a
+			color: $blue
+			font-size: 16px  
+			display: inline-block
+			margin-top: 14px 
+.programma
+	.in
+		background: $orange 
+		padding: 0 40px 20px 40px
+		color: #fff
+		+clr
+	.post
+		color: #fff
+		.post__more
+			@extend %postmore1
+		h3+p
+			font-size: 21px 
+.meet
+	float: right
+	margin-left: 100px 
